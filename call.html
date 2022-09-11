@@ -7,20 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
-
-    num: <br>
-    <input class="num" type="number">
-    <br>
-    <button  onclick="login()" class="btn" >লগ ইন</button> <br>
     <a href="tel:num">call</a>
-
-<script>
-    function login(){
-        const num= document.querySelector(".num").value
- console.log(num);
-
-    }
-</script>
+    <div> <script>
+         document.write( localStorage.getItem('num'))
+        </script> </div>
 </body>
 </html>
