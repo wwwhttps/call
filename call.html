@@ -7,9 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="tel:num">call</a>
+    <a class="call" href="">Send Email</a>
     <div> <script>
          document.write( localStorage.getItem('num'))
-        </script> </div>
-</body>
+       
+       </script> </div>
+
+       <script>
+       const num =  localStorage.getItem('num');
+       const call = document.querySelector(".call").href="tel:" + num;
+       </script>
+       
+    </body>
+
 </html>
