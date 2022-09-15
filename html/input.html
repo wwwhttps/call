@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="input.css">
+    
+</head>
+<body>
+    <div class="body">
+        <div class="cover">
+            <div class="img">
+                <div class="top-img">
+                    <img src="1.png" alt="">
+                </div>
+                <div class="bottom-img">
+                        <img src="image 4.png" alt="">
+                </div>
+            </div>
+            <div class="inputs">
+                <h1 class="heading">
+                    <img src="অঙ্গনা.png" alt="">
+                </h1>
+                <div class="input-cover">
+                    <input class="name" type="text" placeholder="ইউজার নেম">
+                    <input class="num1" type="text" placeholder="ফোন নম্বর- ১">
+                    <input class="num2" type="text" placeholder="ফোন নম্বর-২(নিকটতম থানা)">
+                </div>
+                <button onclick="access()">লগইন</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function access(){
+
+           const num1 = document.querySelector(".num1").value;
+           const num2 = document.querySelector(".num2").value;
+           const name= document.querySelector(".name").value;
+            
+           localStorage.setItem('num1', num1);
+           localStorage.setItem('num2', num2);
+           localStorage.setItem('name', name);
+
+            window.location.href="allow.html"
+        }
+    </script>
+</body>
+</html>

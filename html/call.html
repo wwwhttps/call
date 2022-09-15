@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="input.css">
+    <style>*{
+        padding: 0;
+        margin:0;
+    
+    }
+    .body{
+        margin-left: 15%;
+        margin-right: 15%;
+        min-height: 100vh;
+    }
+    .cover{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .img {
+    height: 35vh;
+    }
+    
+    .img .bottom-img {
+    }
+    
+    .bottom-img {
+    position: relative;
+    margin-top: 19%;
+    }
+    h1.heading {
+    font-size: 2.9rem;
+    margin: 0;
+    }
+    .input-cover input {}
+    
+    .input-cover input {
+    height: 28px;
+    border-radius: 9px;
+    width: 77%;
+    margin: 4%;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid black;
+    }
+    
+    h1.heading {
+    margin-top: 3%; 
+    margin-bottom: 4%;
+    }
+    
+    .inputs {margin-top: 2px;}
+    button {
+    color: #fff;
+    background: #ad0000;
+    border: none;
+    border-radius: 14px;
+    padding: 3% 16%;
+    font-size: 1.5rem;
+    margin-top: 12%;
+    }
+    
+    .inputs a {
+        display: block;
+        margin:  13% 0;
+        background: #ad0000;
+        color: #fff;
+        padding: 10% 1%;
+        border-radius: 12px;
+        text-decoration: none;
+        width: 8rem;
+    }</style>
+</head>
+<body>
+    <div class="body">
+        <div class="cover">
+            <div class="img">
+                <div class="top-img">
+                    <img src="1.png" alt="">
+                </div>
+                <div class="bottom-img">
+                        <img src="image 4.png" alt="">
+                </div>
+            </div>
+            <div class="name-cover">
+                <h1 class="name3">nn</h1>
+            </div>
+            <div class="inputs">
+              <a href="" onclick="call()" class="call">Call now</a>
+              <a href="" onclick="call2()" class="police">Police help</a>
+            </div>
+        </div>
+    </div>
+    <script>
+ onload = (event) => { 
+                const name = localStorage.getItem("name");
+                const proName = document.querySelector(".name3").innerHTML="Hi!" + name;
+
+       console.log(name);
+                }
+
+        function call(){
+        
+        const num1 = localStorage.getItem("num1");
+        
+
+        const call = document.querySelector(".call").href="tel:" + num1;
+      
+
+       console.log(num1)
+           
+        }
+
+        function call2(){
+        
+        const num2 = localStorage.getItem("num2");
+
+        const police = document.querySelector(".police").href="tel:" + num2;
+
+    console.log(num2)
+        }
+
+
+    </script>
+</body>
+</html>

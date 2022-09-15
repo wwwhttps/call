@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="input.css">
+    <style>
+        .first {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+}
+span.access-btn {
+    border-radius: 12px;
+    width: 28%;
+}
+p.access-btn {
+    width: 29%;
+    position: relative;
+    border-radius: 12px;
+}
+
+p.access-btn span {
+    border-radius: 50%;
+    height: 3px;
+    width: 3px;
+    padding: 6px 8px;
+    position: absolute;
+    background: #fff;
+    margin: 1.5px;
+    color: white;
+}
+
+.lefT{
+    left: 0;
+    background: white;
+
+}
+
+.right{
+    right: 0 !important;
+    
+}
+.color{
+    background: rgb(173, 173, 173);
+    
+
+}
+.color-red{
+    background: #ad0000a8;
+    
+
+    
+
+}
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="cover">
+            <div class="img">
+                <div class="top-img">
+                    <img src="1.png" alt="">
+                </div>
+                <div class="bottom-img">
+                        <img src="image 4.png" alt="">
+                </div>
+            </div>
+            <div class="allows">
+                <h1 class="heading">
+                    <img src="অঙ্গনা.png" alt="">
+                </h1>
+                <div class="allow-cover">
+                    <div class="first" onclick="allow(0)">
+                        <p style="display: inline-block;">Location</p> <p class="access-btn color"><span class="left lefT">.</span></p>
+                    </div> 
+                    <div class="first" onclick="allow(1)">
+                        <p style="display: inline-block;">Contacts</p> <p class="access-btn color"><span class="left lefT">.</span></p>
+                    </div> 
+                    <div class="first" onclick="allow(2)">
+                        <p style="display: inline-block;">Storage</p> <p class="access-btn color"><span class="left lefT">.</span></p>
+                    </div> 
+                    <div class="first" onclick="allow(3)">
+                        <p style="display: inline-block;">Widget</p> <p class="access-btn color"><span class="left lefT">.</span></p>
+                    </div> 
+                    <div class="first" onclick="allow(4)">
+                        <p style="display: inline-block;">police</p> <p class="access-btn color"><span class="left lefT">.</span></p>
+                    </div> 
+                        </div>
+                <button class="active" onclick="call()"> Activate</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      
+           
+            
+        
+        function allow(index){
+        var left = document.querySelectorAll(".left")[index];
+        var btn = document.querySelectorAll(".access-btn")[index];
+
+            left.classList.toggle("right");
+    left.classList.toggle("lefT");
+    btn.classList.toggle("color");
+    btn.classList.toggle("color-red");
+        } 
+       function call(){
+           const button= document.querySelector(".active").innerHTML="Activated";
+           window.location.href="call.html"
+
+
+       }
+    </script>
+</body>
+</html>
